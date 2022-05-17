@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+a {
+  text-decoration: none;
+}
+.pasteBinText {
+  outline: none;
+  overflow: auto;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 0 #ddd;
+  vertical-align: top;
+  font-family: "Caveat", cursive;
+  font-size: 24px;
+  line-height: 20px;
+  margin: 2% auto;
+  padding: 22px 20px 30vh 1vw;
+  resize: none;
+  min-height: 50vh;
+  width: 50vw;
+  background-color: #fff;
+  border-color: #ccc;
+  background-image: -webkit-linear-gradient(
+      top,
+      transparent,
+      transparent 19px,
+      #e7eff8 0
+    ),
+    -webkit-radial-gradient(3.9% 46%, circle closest-corner, transparent, transparent
+          43.5%, transparent 0%);
+  background-size: 100% 20px;
+  background-position: 0 0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.landing,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#landing-head h1 {
+  font-size: 90px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 8px 13px #000563;
+}
+
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#password {
+  display: none;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 5px;
+}
+
+/*------------ -------------->*/
+
+#landing {
+  margin-left: -320px;
+}
+
+.page-timeline {
+  margin: 30px auto 0 auto;
+  position: relative;
+  max-width: 1000px;
+}
+
+.page-timeline:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 303px;
+  right: auto;
+  height: 100%;
+  width: 3px;
+  background: #000563;
+  z-index: 0;
+
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page-timeline:after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 40px;
+  background: #000563;
+  background: -webkit-linear-gradient(top, #000563, rgba(52, 152, 219, 0));
+  background: linear-gradient(to bottom, #000563, rgba(52, 152, 219, 0));
+  top: 100%;
+  left: 303px;
+
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.vtimeline-content {
+  width: 550px;
+  margin-left: 350px;
+  background: #fff;
+  border: 1px solid #57be8e;
+  padding: 35px 20px;
+  border-radius: 3px;
+  text-align: left;
+
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.vtimeline-content h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0;
+  color: #000563;
+}
+
+.vtimeline-content p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.vtimeline-point {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+.vtimeline-icon {
+  position: relative;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  background: #000563;
+  border-radius: 50%;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  z-index: 99;
+  margin-left: 280px;
+}
+
+.vtimeline-icon i {
+  display: block;
+  font-size: 1.5em;
+  line-height: 50px;
+}
+
+.vtimeline-date {
+  width: 260px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: 400;
+  color: #374054;
+}
+.post-meta {
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+.post-meta li:not(:last-child) {
+  margin-right: 10px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #252525;
+  font-weight: 700;
+  font-variant-ligatures: common-ligatures;
+  margin-top: 0;
+  letter-spacing: -0.2px;
+  line-height: 1.3;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+
+.list-inline-item,
+.les-meer {
+  color: #57be8e;
+}
+
+.les-meer:hover {
+  color: #000;
+}
+
+.ibmText {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.ibmHeader {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#wacht {
+  color: #000;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 5px;
+}
+
+#pas {
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(107 114 128);
+  color: #fff;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+#pas:hover {
+  color: #fff;
+  background-color: #000563;
+}
+
+.share,
+img {
+  position: relative;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#download, #share, #view {
+  padding: 5px 10px 5px 10px;
+  margin-left: 20px;
+  background-color: rgb(107 114 128);
+  color: #fff;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+#download:hover, #share:hover, #view:hover {
+  color: #fff;
+  background-color: #000563;
+}
+
+
+/*------------ -------------->*/
+
+@media only screen and (max-width: 800px) {
+  #landing-header {
+    margin: 20px;
+  }
+
+  #landing-form {
+    display: none;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .vtimeline-content {
+    width: 300px;
+    background: #fff;
+    border: 1px solid #57be8e;
+    padding: 35px 20px;
+    border-radius: 3px;
+    text-align: left;
+    -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%),
+      0 6px 10px 0 rgb(0 0 0 / 30%);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 30%);
+  }
+}
+
+/*------------ -------------->*/
